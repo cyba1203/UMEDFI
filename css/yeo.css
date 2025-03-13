@@ -1,0 +1,1398 @@
+/* GENERAL STYLES */
+body {
+    background: #fff;
+    font-family: 'Poppins', sans-serif;
+    color: #2E2E2E;
+    font-weight: 400;
+}
+
+/* NAVBAR (PARENT) - HEIGHT 130PX */
+.container.yeo-header.sticky-header {
+    background: #0a1a3e center;
+    background-size: auto;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+    width: 100%;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* NAVBAR CONTAINER - HEIGHT 128PX */
+.navbar {
+    display: flex;
+    align-items: center; /* Vertically centers content */
+    justify-content: space-between; /* Keeps logos on the left and links on the right */
+    width: 100%;
+    height: 100%; /* Ensures navbar fills the parent div */
+}
+
+/* NAVBAR SECTIONS & LOGO CONTAINER - HEIGHT 120PX */
+.navbar .navbar-section,
+.logo-container {
+    display: flex;
+    align-items: center;
+    height: 120px;
+}
+
+/* LOGO CONTAINER */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Ensures proper spacing */
+}
+.logo-container {
+    margin-top: -40px; /* Moves it up */
+}
+/* LOGO STYLES */
+.logo-img {
+    height: 120px; /* Fixes logos at exactly 120px */
+    width: auto; /* Maintains aspect ratio */
+    object-fit: contain;
+}
+.logo-img[src*="umaklogo.png"] {
+    height: 90px; /* Reduce size */
+}
+
+/* NAVIGATION MENU */
+.nav-links {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.nav-links a {
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0 15px;
+    white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+    font-weight: bold;
+}
+
+/* HAMBURGER MENU ICON */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-icon img {
+    width: 50px;
+    height: 50px;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    padding: 20px;
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+    justify-content: flex-start;
+    height: auto;
+    padding-top: 130px; /* Ensures space below the fixed navbar */
+}
+
+/* MOBILE MENU LINKS */
+.mobile-menu a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .nav-links {
+        gap: 15px;
+    }
+    .nav-links a {
+        font-size: 24px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    .menu-icon {
+        display: block;
+    }
+    .mobile-menu.active {
+        display: flex;
+    }
+}
+
+
+.container {
+    max-width: 1280px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+a:focus {
+    box-shadow: none;
+}
+
+a:focus,
+a:hover,
+a:active {
+    text-decoration: none;
+    color: #2623d0;
+}
+
+
+.container .columns {
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
+.container .column {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.yeo-body {
+    max-width: 1280px;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    text-align: center;
+}
+
+.background {
+  background-image: url('UMAKGradient.png');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container img {
+  max-width: 50%;
+  height: auto;
+}
+/* Target only the UMED logo and shift it left */
+.logo-img[src*="umedfilogo.png"] {
+    margin-left: -35px; /* Adjust this value to control overlap */
+}
+.yeo-slogan {
+    background: #0a007e center;
+    background-size: auto;
+    padding-bottom: 3rem;
+/* Rectangle 10: */
+background-image: -webkit-linear-gradient(44deg, #0C0091 0%, #00A87E 100%);
+background-image: -o-linear-gradient(44deg, #0C0091 0%, #00A87E 100%);
+background-image: linear-gradient(134deg, #0C0091 0%, #00A87E 100%);
+}
+
+.yeo-slogan .slogan-bold {
+    display: block;
+}
+
+.yeo-slogan .slogan-normal {
+    display: block;
+}
+
+.yeo-slogan p {
+    font-size: .9rem;
+    line-height: 1.6;
+    font-weight: 200;
+    opacity: 0.8;
+    width: 90%;
+    margin-bottom: 2rem;
+}
+
+.slogan {
+    background: transparent;
+    padding-top: 3rem;
+    color: #fff;
+    text-align: left;
+    max-width: 1280px;
+}
+
+.slogan h1 {
+    font-size: 3.2rem;
+    font-family: 'Poppins', serif;
+    font-weight: 700;
+    text-shadow: 0px 5px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.3;
+    max-width: 950px;
+    margin-bottom: 1rem;
+    letter-spacing: 0.05rem;
+}
+
+/* ABOUT UMEDFI SECTION */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* LEFT SIDE - TAGLINE */
+.tagline {
+    flex: 1;
+    text-align: left;
+}
+
+.tagline h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #0A2647; /* Dark blue color */
+    line-height: 1.2;
+}
+
+.tagline .quote {
+    font-size: 50px;
+    color: #0A2647;
+    font-weight: 700;
+}
+
+/* RIGHT SIDE - ABOUT CONTENT */
+.about-content {
+    flex: 2;
+    padding-left: 40px;
+}
+
+.about-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #7AC142; /* Green title */
+}
+
+.about-content p {
+    font-size: 18px;
+    color: #2E2E2E;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .tagline {
+        margin-bottom: 20px;
+    }
+
+    .about-content {
+        padding-left: 0;
+    }
+}
+.slogan-img {
+    max-width: 100%;
+    margin-top: 25px;
+}
+
+.yeo-header {
+    background: transparent;
+}
+
+.yeo-header a {
+    color: #fff;
+}
+
+.slogan .slogan-bold {
+    color: #00ffd4;
+}
+
+
+.slogan .btn-start {
+    padding: .9rem 1.5rem;
+    height: auto;
+    background: transparent;
+    color: #fff;
+    font-weight: 400;
+    text-transform: uppercase;
+    border-color: rgba(255, 255, 255, .4);
+    letter-spacing: 0.05rem;
+}
+
+.feature-title {
+    font-weight: 200;
+    font-size: 1rem;
+    padding: .5rem 0 .5rem 0;
+    opacity: .5;
+    text-align: center;
+    display: inline-block;
+    border-bottom: 1px solid #bcb9b9;
+    margin: 0 auto 2rem;
+}
+
+.yeo-header .navbar {
+    max-width: 1280px;
+    max-height: ;
+    margin: 0 auto;
+    padding: 1.5rem 0 1rem 0;
+}
+
+.yeo-header .navbar-section .btn.btn-link {
+    color: #fff;
+    padding: .25rem 1.2rem;
+    opacity: .9;
+}
+
+.yeo-header .btn-hire-me {
+    background: #00bc9e;
+    border-color: transparent;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: .25rem 1rem;
+}
+
+/* Our Client*/
+
+.yeo-client {
+    background: #f4f4f4;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.yeo-client-title {
+    text-align: center;
+    font-size: 1rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: 200;
+    opacity: .5;
+}
+
+
+.client-logo {}
+
+.yeo-client a {
+    display: inline-block;
+    margin-right: 3.5rem;
+}
+
+.yeo-client a:last-child {
+    margin: 0;
+}
+
+.yeo-client img {
+    height: 34px;
+}
+
+/* Yeo Price */
+
+.yeo-price {
+    padding: 0 0 4rem 0;
+    background: #0a007e;
+}
+
+.yeo-price .panel {
+    text-align: center;
+    background: #fff;
+    border: none;
+}
+
+.yeo-price .panel ul {
+    list-style: none;
+    margin: 0 1rem;
+}
+
+.yeo-price .panel .panel-title {
+    font-size: .8rem;
+    font-weight: 400;
+    padding: .5rem 0 0 0;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 1rem;
+}
+
+.yeo-price .panel p {
+    margin: 0;
+}
+
+.yeo-price .panel .price {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.yeo-price .btn-price {
+    padding: .6rem 1rem;
+    background: #1f1f23;
+    color: #fff;
+    height: auto;
+    min-width: 220px;
+    font-size: .9rem;
+}
+
+.yeo-price .panel .panel-footer {
+    padding-bottom: 2rem;
+}
+
+/* Yeo Team */
+
+.yeo-team {
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding: 3rem 0;
+    background: #f7f7f7;
+}
+
+
+.yeo-team .team-title {
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+
+.yeo-team .name {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: .6rem 0 .2rem 0;
+    display: block;
+}
+
+
+.yeo-team .title {
+    font-size: .8rem;
+    opacity: .5;
+}
+
+
+.yeo-team img {
+    max-width: 250px;
+}
+
+.yeo-team .s-circle {
+    border-radius: 4px;
+}
+
+
+/* What We Do */
+/* MISSION & VISION SECTION */
+.mission-vision-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 40px;
+    background: #0a1a3e; /* Dark navy background */
+    color: white;
+}
+
+/* MISSION & VISION SECTION */
+.mission-vision-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%; /* Spread across full width */
+    max-width: 100%;
+    padding: 40px 5%; /* Use percentage-based padding for better responsiveness */
+    background: #0a1a3e; /* Dark navy background */
+    color: white;
+     margin-bottom: 0; /* Remove bottom margin */
+    padding-bottom: 0; /* Ensure no extra spacing */
+}
+
+/* COMMON STYLES FOR BOTH COLUMNS */
+.mission, .vision {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+/* TITLES */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* MISSION STYLING */
+.mission .title {
+    color: #7AC142; /* Green color for Mission */
+    border-bottom: 2px solid #7AC142;
+    padding-bottom: 5px;
+}
+
+/* BULLET POINTS */
+.mission-list {
+    list-style-type: none; /* Remove default bullets */
+    padding-left: 0;
+}
+
+.mission-list li {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    position: relative;
+    padding-left: 25px; /* Space for custom bullet */
+}
+
+/* Custom Green Bullet */
+.mission-list li::before {
+    content: "•"; /* Custom bullet point */
+    color: #7AC142; /* Green bullet */
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 3px;
+}
+
+/* VISION STYLING */
+.vision .title {
+    color: white;
+    border-bottom: 2px solid white;
+    padding-bottom: 5px;
+}
+
+.vision p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .mission-vision-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .mission, .vision {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .mission-list {
+        text-align: left;
+        margin: 0 auto;
+    }
+}
+.ul {
+    font-size: 32px;
+}
+.yeo-do {
+    padding: 3rem 0 4rem 0;
+    text-align: center;
+}
+
+
+
+.yeo-do .yeo-do-content {
+    padding: 0 1rem;
+}
+
+.yeo-do img {
+    max-height: 60px;
+}
+
+.yeo-do h3 {
+    font-size: .9rem;
+    font-weight: 700;
+    padding: 1rem 0 .1rem 0;
+}
+
+.yeo-do p {
+    font-size: .8rem;
+    font-weight: 400;
+    opacity: .8;
+}
+
+.yeo-do a {
+    color: #382CBE;
+}
+
+
+/* PUBLICATIONS & SOCIAL MEDIA SECTION */
+.publications-section {
+    text-align: center;
+    background: #0a1a3e; /* Dark navy background */
+    padding: 50px 20px;
+    color: white;
+    width: 100%; /* Ensures full width */
+    margin-top: 0; /* Remove top margin */
+    padding-top: 0; /* Ensure no extra spacing */
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 64px;
+    font-weight: bold;
+    color: #7AC142; /* Green text */
+    margin-bottom: 40px;
+}
+
+/* PUBLICATIONS & SOCIAL MEDIA SECTION */
+.publications-section {
+    text-align: center;
+    background: #0a1a3e; /* Dark navy background */
+    padding: 50px 20px;
+    color: white;
+    width: 100%; /* Full-width layout */
+}
+
+/* SECTION TITLE */
+.section-title {
+    font-size: 64px;
+    font-weight: bold;
+    color: #7AC142; /* Green text */
+    margin-bottom: 40px;
+}
+
+/* PUBLICATIONS CONTAINER */
+.publications-container {
+    display: flex;
+    justify-content: space-between; /* Evenly spread across */
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* PUBLICATION ITEM */
+.publication-item {
+    text-align: center;
+    width: 23%; /* Makes sure all 4 images fit in one row */
+}
+
+/* PUBLICATION LABEL */
+.publication-label {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* IMAGE STYLING */
+.publication-item img {
+    width: 100%; /* Ensures it scales properly */
+    max-width: 300px; /* Adjust to fit in one row */
+    height: auto;
+    object-fit: contain; /* Ensures aspect ratio is maintained */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+    .publications-container {
+        flex-wrap: wrap;
+    }
+
+    .publication-item {
+        width: 48%; /* 2 images per row */
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 48px;
+    }
+
+    .publications-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .publication-item {
+        width: 80%; /* Full width on small screens */
+    }
+}
+
+
+/* How We Work */
+
+.yeo-work {
+    padding: 4rem 0 1rem 0;
+    background: #0a007e;
+    color: #fff;
+    background-size: cover;
+}
+
+.yeo-work-feature-bold {
+    color: #00ffd4;
+}
+
+.yeo-work-img img {
+    width: 300px;
+}
+
+.yeo-work .yeo-work-feature {
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 1.3;
+    text-align: center;
+}
+
+/* FOOTER STYLES */
+.footer {
+    width: 100%; /* Full width */
+    height: 120px; /* Fixed height */
+    background: #0a1a3e; /* Same dark navy background as other sections */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content */
+    position: relative;
+}
+
+/* FOOTER CONTENT */
+.footer-content {
+    display: flex;
+    justify-content: center; /* Centers the image */
+    align-items: center;
+    width: 100%;
+}
+
+/* CENTERED SOCIAL MEDIA ICONS */
+.footer-socials {
+    height: 50px; /* Scaled down */
+    width: auto; /* Maintain aspect ratio */
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    .footer-socials {
+        height: 40px; /* Smaller size on mobile */
+    }
+}
+
+
+
+/* Open Source */
+
+.yeo-open-source {
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.open-source-feature {
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+.yeo-open-source .btn-open-source {
+    padding: .8rem 1.5rem;
+    background: #fff;
+    border-color: #ddd;
+    color: #444;
+    height: auto;
+}
+
+
+.yeo-footer {
+    background: #0a007e;
+    color: #fff;
+    padding: 3rem 0;
+}
+
+.yeo-footer h4 {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.yeo-footer .nav .nav-item a {
+    padding: .3rem 0rem;
+    color: #fff;
+    opacity: 0.8;
+    font-weight: 200;
+}
+
+
+
+@media (max-width: 600px) {
+
+    .slogan {
+        padding-top: 0rem;
+    }
+
+    .slogan h1 {
+        font-size: 1.6rem;
+        line-height: 1.5;
+        margin-bottom: .5rem;
+    }
+
+    .yeo-slogan {
+        padding-bottom: 2rem;
+    }
+
+    .yeo-slogan p {
+        font-size: .7rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .yeo-do {
+        padding: 1rem 0 2rem 0;
+    }
+
+    .yeo-do .yeo-do-content {
+        padding-right: 0;
+        padding-bottom: 1.5rem;
+        text-align: center;
+        border-bottom: 1px solid #ddd;
+        margin-bottom: 1.5rem;
+    }
+
+    .yeo-client a {
+        margin: 10px 15px;
+    }
+
+    .yeo-price .panel {
+        text-align: center;
+        background: #fff;
+        margin-bottom: 1rem;
+    }
+
+    .yeo-do h3 {
+        font-size: 1rem;
+        font-weight: 700;
+        padding: 1rem 0 .1rem 0;
+    }
+
+    .yeo-work {
+        padding: 2rem 0;
+        text-align: center;
+    }
+
+    .yeo-work .yeo-work-feature {
+        font-size: 2rem;
+    }
+
+    .yeo-open-source {
+        padding: 2rem 0;
+    }
+
+    .open-source-feature {
+        font-size: 2rem;
+    }
+
+    .yeo-client img {
+    height: 30px;
+}
+
+    .yeo-footer {
+        padding: 2rem 0;
+    }
+
+    .yeo-footer-content {
+        padding-bottom: 1rem;
+    }
+
+    .yeo-footer h4 {
+        font-size: 1rem;
+        color: #fff;
+        margin-bottom: 0;
+    }
+
+    .feature-title {
+        font-weight: 200;
+        font-size: 1rem;
+        padding: 1rem 0 1rem 0;
+        opacity: .5;
+    }
+
+    .yeo-team {
+        padding: 1rem 0;
+    }
+
+    .yeo-price {
+        padding: 0 0 2rem 0;
+    }
+
+    .yeo-team .title {
+        font-size: .8rem;
+        opacity: .5;
+        padding-bottom: 2rem;
+        display: block;
+    }
+
+    .yeo-price .btn-price {
+        padding: .6rem .5rem;
+        background: #382CBE;
+        color: #fff;
+        height: auto;
+        width: 90%;
+        font-size: .8rem;
+    }
+
+}
+
+/* CARDS CONTAINER */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for two cards per row */
+    grid-template-rows: auto;
+    grid-column-gap: 20px; /* Spacing between columns */
+    grid-row-gap: 20px; /* Spacing between rows */
+    justify-content: center;
+    max-width: 1800px;
+    margin-top:     150px;
+}
+
+/* INDIVIDUAL CARD STYLES */
+.card {
+    background: #f5f5f5; /* Light-grey background */
+    color: black;
+    width: 880px; /* Fixed width */
+    height: 880px; /* Fixed height */
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* IMAGE INSIDE CARD */
+.card-image {
+    width: 790px; /* Set width */
+    height: 640px; /* Set height */
+    object-fit: cover;
+    margin: 20px auto 0 auto;
+    display: block;
+}
+
+/* CARD CONTENT */
+.card-content {
+    width: 780px;
+    height: 362px;
+    padding: 20px;
+    margin: 0 auto;
+}
+
+/* CARD HEADING */
+.card-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #7AC142; /* Green text */
+    margin-bottom: 10px;
+}
+
+/* CARD TEXT */
+.card-text {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* READ MORE LINK */
+.card-text a {
+    color: #0a1a3e;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.card-text a:hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1600px) {
+    .cards-container {
+        grid-template-columns: repeat(1, 1fr); /* Stack cards in 1 column on smaller screens */
+    }
+
+    .card {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-content {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.faculty-members {
+    width: 100%;
+    padding: 50px;
+    background: linear-gradient(135deg, #0a1a3e, #142d58);
+    color: white;
+    font-family: Arial, sans-serif;
+    margin-top: 130px; /* Adjust if needed */
+}
+
+.faculty-table {
+    width: 100%;
+    border-spacing: 20px;
+    table-layout: fixed;
+}
+
+.faculty-table td {
+    height: 150px; /* Adjust height as needed */
+    vertical-align: middle;
+    padding: 10px;
+}
+.full-width-row {
+    width: 100%; 
+    display: table; /* forces full width */
+}
+
+.centered-td {
+    display: table-cell; 
+    text-align: center; /* horizontally centers content */
+    width: 100%;
+}
+.faculty-cell {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.member-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-left: 20px; /* Image on right side */
+    flex-shrink: 0;
+}
+
+.faculty-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.faculty-name {
+    font-size: 22px;
+    font-weight: bold;
+    color: #7AC142;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.faculty-description {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Responsive adjustment */
+@media (max-width: 768px) {
+    .faculty-table td {
+        display: block;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .faculty-cell {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .member-image {
+        margin: 10px 0;
+    }
+
+    .faculty-details {
+        align-items: center;
+    }
+}
+
+.newsletter-content-section {
+            margin-top: 120px;
+            width: 100%;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+
+        .newsletter-content-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2rem;
+            color: #333;
+        }
+
+        .newsletter-content-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            max-width: 100%;
+            width: 95%;
+        
+            margin-right: 200px;
+        }
+
+        .newsletter-content-card {
+            width: 100%;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            height: 70vh; 
+            }
+
+        .newsletter-content-image {
+            position: relative;
+            height: 30%;
+            min-height: 200px;
+        }
+
+        .newsletter-content-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .newsletter-content-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .newsletter-content-title-text {
+            color: #2c5f2d;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+
+        .newsletter-content-description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .newsletter-content-read-more {
+            text-align: center;
+            margin-top: auto;
+        }
+
+        .newsletter-content-read-more img {
+            width: 140px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .newsletter-content-read-more:hover img {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .newsletter-content-container {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-content-title {
+                font-size: 1.5rem;
+            }
+
+            .newsletter-content-image {
+                min-height: 150px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .newsletter-content-section {
+                padding: 30px 15px;
+            }
+
+            .newsletter-content-title-text {
+                font-size: 1rem;
+            }
+
+            .newsletter-content-description {
+                font-size: 0.9rem;
+            }
+
+             .newsletter-articles-content-container {
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            background-color: #ffffff;
+            margin-top: 250px  ;
+        }
+    }
+        
+
+        .newsletter-articles-content-image-wrapper {
+            position: center    ;
+            width: 100%;
+            height: auto;
+            padding-top: 56.25%; /* 16:9 aspect ratio */
+            overflow: hidden;
+        }
+
+        .newsletter-articles-content-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100%;
+            object-fit: cover;
+            margin-top: 100px;
+        }
+
+        .newsletter-articles-content-body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .newsletter-articles-content-title {
+            color: #2c5f2d;
+            font-size: 2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        .newsletter-articles-content-text {
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .newsletter-articles-content-floating-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.9);
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-articles-content-floating-btn:hover {
+            background-color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            .newsletter-articles-content-body {
+                padding: 30px 15px;
+            }
+
+            .newsletter-articles-content-title {
+                font-size: 1.5rem;
+            }
+
+            .newsletter-articles-content-floating-btn {
+                width: 35px;
+                height: 35px;
+                top: 15px;
+                right: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .newsletter-articles-content-title {
+                font-size: 1.2rem;
+            }
+
+            .newsletter-articles-content-text {
+                font-size: 0.9rem;
+            }
+
+            .newsletter-articles-content-floating-btn {
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        .newsletter-articles-otherimages-container {
+    width: 80%; /* 80% of the parent div */
+    height: auto; /* Auto height */
+    margin: 0 auto; /* Center the div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-articles-otherimages-img {
+    width: 100%; /* Image takes full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
+}
+.president-faculty-profile-card {
+    display: flex;
+    justify-content: center; /* Centers the div horizontally */
+    align-items: center; /* Centers content vertically if needed */
+    width: 100%; /* Ensures it takes the full width */
+    padding: 20px 0;
+    font-family: Arial, sans-serif;
+    color: #7AC142;
+}
+
+.president-faculty-cell {
+    text-align: center;
+    max-width: 300px;
+}
+
+.president-faculty-image {
+    width: 100%;
+    max-width: 200px; /* Adjust as needed */
+    border-radius: 50%;
+}
+
+.president-faculty-details {
+    margin-top: 10px;
+}
+
+.president-faculty-name {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.president-faculty-description {
+    font-size: 14px;
+    color: gray;
+}
