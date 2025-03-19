@@ -28,6 +28,22 @@
     <link rel="stylesheet" href="./css/spectre-icons.css">
     <link rel="stylesheet" href="./css/spectre-exp.css">
     <link rel="stylesheet" href="./css/yeo.css">
+
+    <script defer>
+        function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    const newsletterSection = document.querySelector(".newsletter-content-section");
+
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        newsletterSection.style.marginTop = "120px"; // Reset margin when menu is closed
+    } else {
+        menu.classList.add("active");
+        newsletterSection.style.marginTop = "390px"; // Push content down to prevent overlap
+    }
+}
+
+    </script>
 </head>
 
 <body>
@@ -210,6 +226,10 @@
             <!-- Add more article cards as needed -->
         </div>
     </section>
-
+<footer class="footer">
+    <div class="footer-content">
+        <img class="footer-socials" src="./images/SOCIALSNEW.png" alt="Social Media Icons">
+    </div>
+</footer>
 </body>
 </html>

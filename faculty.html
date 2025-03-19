@@ -28,6 +28,23 @@
     <link rel="stylesheet" href="./css/spectre-icons.css">
     <link rel="stylesheet" href="./css/spectre-exp.css">
     <link rel="stylesheet" href="./css/yeo.css">
+
+    <script defer>
+        function toggleMenu() {
+    const menu = document.getElementById("mobileMenu");
+    const facultySection = document.querySelector(".faculty-members");
+
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        facultySection.style.marginTop = "120px"; // Reset margin when menu is closed
+    } else {
+        menu.classList.add("active");
+        facultySection.style.marginTop = "380px"; // Push content down to prevent overlap
+    }
+}
+
+
+    </script>
 </head>
 <body>
 	<!-- Sticky Header with Navigation -->
@@ -103,7 +120,7 @@
             <tr>
                 <td>
                     <div class="faculty-cell">
-                    	<img class="member-image" src="./images/faculty_TORRALBA.png" alt="Member 3">
+                    	<img class="member-image" src="./images/faculty_TORRALBA.png" alt="Member 1">
                         <div class="faculty-details">
                             <div class="faculty-name">Oscar Torralba</div>
                             <div class="faculty-description">Member, Board of Directors</div>
@@ -113,7 +130,7 @@
                 </td>
                 <td>
                     <div class="faculty-cell">
-                    	<img class="member-image" src="./images/faculty_LIN.png" alt="Member 4">	
+                    	<img class="member-image" src="./images/faculty_LIN.png" alt="Member 2">	
                         <div class="faculty-details">
 
                             <div class="faculty-name">Joseph Lim</div>
@@ -126,7 +143,7 @@
             <tr>
                 <td>
                     <div class="faculty-cell">
-                    	<img class="member-image" src="./images/faculty_TORRES.png" alt="Member 5">
+                    	<img class="member-image" src="./images/faculty_TORRES.png" alt="Member 1">
                         <div class="faculty-details">
                             <div class="faculty-name">Milagros Torres</div>
                             <div class="faculty-description">Member, Board of Directors</div>
@@ -136,7 +153,7 @@
                 </td>
                 <td>
                     <div class="faculty-cell">
-                    	<img class="member-image" src="./images/faculty_BRILLANTES.png" alt="Member 6">	
+                    	<img class="member-image" src="./images/faculty_BRILLANTES.png" alt="Member 2">	
                         <div class="faculty-details">
 
                             <div class="faculty-name">Alex Brillantes Jr.</div>
@@ -149,7 +166,7 @@
             <tr>
                 <td>
                     <div class="faculty-cell">
-                    	<img class="member-image" src="./images/faculty_PERANTE-CALINA.png" alt="Member 7">
+                    	<img class="member-image" src="./images/faculty_PERANTE-CALINA.png" alt="Member 1">
                         <div class="faculty-details">
                             <div class="faculty-name">Liza Perante-Calina</div>
                             <div class="faculty-description">Member, Board of Directors</div>
@@ -159,7 +176,7 @@
                 </td>
                 <td>
                     <div class="faculty-cell">
-                    	<img class="member-image" src="./images/faculty_RODRIGUEZ.png" alt="Member 8">	
+                    	<img class="member-image" src="./images/faculty_RODRIGUEZ.png" alt="Member 2">	
                         <div class="faculty-details">
 
                             <div class="faculty-name">Joycelynn Rodriguez</div>
@@ -173,6 +190,10 @@
         </tbody>
     </table>
 </div>
-
+<footer class="footer">
+    <div class="footer-content">
+        <img class="footer-socials" src="./images/SOCIALSNEW.png" alt="Social Media Icons">
+    </div>
+</footer>
 </body>
 </html>
