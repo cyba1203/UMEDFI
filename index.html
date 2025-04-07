@@ -24,31 +24,57 @@
         function toggleMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('active');
+
         }
+        document.addEventListener("DOMContentLoaded", function () {
+    const images = document.querySelectorAll(".hover-image");
+
+    images.forEach(img => {
+        const originalSrc = img.src;
+        const hoverSrc = img.getAttribute("data-hover");
+
+        img.addEventListener("mouseover", function () {
+            img.src = hoverSrc;
+        });
+
+        img.addEventListener("mouseout", function () {
+            img.src = originalSrc;
+        });
+    });
+});
+
     </script>
 </head>
 
 <body>
 <div class="container yeo-header sticky-header">
-        <header class="navbar">
-            <section class="navbar-section logo-container">
-                <a class="navbar-brand logo" href="./">
-                    <img class="logo-img" src="./images/umedfilogo.png" alt="UMED Logo">
-                </a>
-            </section>
-            
-            <nav class="nav-links">
-                <a class="btn btn-link" href="./index.html">HOME</a>
-                <a class="btn btn-link" href="#we-work">PROGRAM</a>
-                <a class="btn btn-link" href="#price">PROJECTS</a>
-                <a class="btn btn-link" href="./faculty.html">BOARD OF DIRECTORS</a>
-            </nav>
-            
-            <div class="menu-icon" onclick="toggleMenu()">
-                <img src="./images/menu-icon.png" alt="Menu">
+    <header class="navbar">
+        <section class="navbar-section logo-container">
+            <a class="navbar-brand logo" href="./">
+                <img class="logo-img" src="./images/umedfilogo.png" alt="UMED Logo">
+            </a>
+        </section>
+        
+        <nav class="nav-links">
+            <a class="btn btn-link" href="./index.html">HOME</a>
+            <a class="btn btn-link" href="#we-work">PROGRAM</a>
+            <div class="dropdown">
+                <a class="btn btn-link" href="devproj.html">PROJECTS</a>
+                <div class="dropdown-content">
+                    <a href="./devproj.html">Faculty Development</a>
+                    <a href="./research.html">Research</a>
+                    <a href="./publication.html">Publication</a>
+                    <a href="./communityextension.html">Community Extension</a>
+                </div>
             </div>
-        </header>
-    </div>
+            <a class="btn btn-link" href="./faculty.html">BOARD OF DIRECTORS</a>
+        </nav>
+        
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="./images/menu-icon.png" alt="Menu">
+        </div>
+    </header>
+</div>
     
      <nav class="mobile-menu" id="mobileMenu">
         <a href="./index.html">HOME</a>
@@ -67,7 +93,7 @@
 </div>
 <div class="about-container">
     <div class="tagline">
-        <h2 ><span class="quote">"</span>INSERT<br><strong>TAGLINE</strong><span class="quote">"</span></h2>
+        <h2 ><span class="quote">"</span>Cultivating Tomorrow's Innovators, <br><strong>Today.</strong><span class="quote">"</span></h2>
     </div>
     <div class="about-content">
         <h2 class="about-title">About UMEDFI</h2>
@@ -108,27 +134,23 @@
         
                     
         <div class="publications-section">
-    <h2 class="section-title">PUBLICATIONS & SOCIAL MEDIA</h2>
-    <div class="publications-container">
-        <div class="publication-item">
-            <h3 class="publication-label">UMEDFI Newsletter</h3>
-            <a href="newsletter.html">
-    <img src="./images/newsletter.png" alt="UMEDFI Newsletter">
-</a></div>
-        <div class="publication-item">
-            <h3 class="publication-label">Annual Report 2024</h3>
-            <img src="./images/UMEDFI ANNUAL COVER.png" alt="Annual Report 2024">
-        </div>
-        <div class="publication-item">
-            <h3 class="publication-label">Facebook Page</h3>
-            <img src="./images/facebookpage.png" alt="Facebook Page">
-        </div>
-        <div class="publication-item">
-            <h3 class="publication-label">Instagram Page</h3>
-            <img src="./images/instagrampage.png" alt="Instagram Page">
-        </div>
+    <h2 class="section-title">PUBLICATIONS</h2>
+    <div class="publications">
+    <!-- Left Image (Annual Report) -->
+    <div class="publication-item">
+        <a href="newsletter.html">
+            <img src="./images/ar1.png" alt="Annual Report" class="hover-image" data-hover="./images/ar2.png">
+        </a>
+    </div>
+
+    <!-- Right Image (Newsletter) -->
+    <div class="publication-item">
+        <a href="newsletter.html">
+            <img src="./images/nl1.png" alt="Newsletter" class="hover-image" data-hover="./images/nl2.png">
+        </a>
     </div>
 </div>
+
 
 
         <footer class="footer">
@@ -137,11 +159,7 @@
     </div>
 </footer>
 
-<footer class="footer">
-    <div class="footer-content">
-        <img class="footer-socials" src="./images/SOCIALSNEW.png" alt="Social Media Icons">
-    </div>
-</footer>
+
 </body>
 
 </html>
