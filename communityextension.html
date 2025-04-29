@@ -9,7 +9,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
     <!-- Page Title -->
-    <title>PROJECTS</title>
+    <title>NEWSLETTER</title>
     
     <!-- SEO Meta Tags -->
     <meta name="keywords" content="yeo">
@@ -31,26 +31,17 @@
 
     <script defer>
         function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
+    const menu = document.getElementById("mobileMenu");
+    const newsletterSection = document.querySelector(".newsletter-content-section");
 
-        }
-        document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".hover-image");
-
-    images.forEach(img => {
-        const originalSrc = img.src;
-        const hoverSrc = img.getAttribute("data-hover");
-
-        img.addEventListener("mouseover", function () {
-            img.src = hoverSrc;
-        });
-
-        img.addEventListener("mouseout", function () {
-            img.src = originalSrc;
-        });
-    });
-});
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        newsletterSection.style.marginTop = "120px"; // Reset margin when menu is closed
+    } else {
+        menu.classList.add("active");
+        newsletterSection.style.marginTop = "390px"; // Push content down to prevent overlap
+    }
+}
 
     </script>
 </head>
@@ -96,17 +87,17 @@
 
     <!-- Newsletter Articles Section -->
     <section class="newsletter-content-section">
-        <h1 class="newsletter-content-title">PROJECTS</h1>
+        <h1 class="newsletter-content-title">Community Extension</h1>
         <div class="newsletter-content-container">
             <!-- Article 1 -->
             <div class="newsletter-content-card">
                 <div class="newsletter-content-image">
-                    <img src="./images/fd_image1.png" alt="Article Image">
+                    <img src="./images/FA_image1.png" alt="Article Image">
                 </div>
                 <div class="newsletter-content-body">
-                    <h3 class="newsletter-content-title-text">Faculty Development</h3>
-                    <p class="newsletter-content-description">UMEDFI supports continuous learning and growth among UMak educators by providing training, workshops, and capacity-building programs that strengthen teaching practices and academic leadership.</p>
-                    <a href="facultydevelopment.html" class="newsletter-content-read-more">
+                    <h3 class="newsletter-content-title-text">University of Makati's Cultural Mapping Project Shortlisted in THE Awards Asia 2025 and partict THE Asia Universities Summit</h3>
+                    <p class="newsletter-content-description">The University of Makati (UMak) has been selected as a finalist for the Research Project of the Year in Arts, Humanities, and Social Sciences at the 7th edition of the Times Higher Education (THE) Awards Asia 2025.</p>
+                    <a href="cemapping.html" class="newsletter-content-read-more">
                         <img src="./images/readmore.png" alt="Read More">
                     </a>
                 </div>
@@ -115,49 +106,16 @@
             <!-- Article 2 -->
             <div class="newsletter-content-card">
                 <div class="newsletter-content-image">
-                    <img src="./images/fd_image2.png" alt="Article Image">
+                    <img src="./images/FA_image2.png" alt="Article Image">
                 </div>
                 <div class="newsletter-content-body">
-                    <h3 class="newsletter-content-title-text">Research</h3>
-                    <p class="newsletter-content-description">Through funding, collaboration, and strategic guidance, UMEDFI encourages impactful research that addresses real-world issues, drives innovation, and contributes to the academic excellence of the University of Makati.</p>
-                    <a href="research.html" class="newsletter-content-read-more">
+                    <h3 class="newsletter-content-title-text">University of Makati - Year-end Convocation 2024</h3>
+                    <p class="newsletter-content-description">The University of Makati celebrated its Annual Year-End Convocation on December 11, 2024, with the theme "Joyful Jubilee: A Holiday Toast to Achievements of Working Together." The event featured a heartfelt holiday toast, honoring the university's accomplishments over the past years.</p>
+                    <a href="ceyearend.html" class="newsletter-content-read-more">
                         <img src="./images/readmore.png" alt="Read More">
                     </a>
                 </div>
             </div>
-            <!-- Article 3 -->
-
-            <div class="newsletter-content-card">
-                <div class="newsletter-content-image">
-                    <img src="./images/fd_image3.png" alt="Article Image">
-                </div>
-                <div class="newsletter-content-body">
-                    <h3 class="newsletter-content-title-text">Publication</h3>
-                    <p class="newsletter-content-description"> UMEDFI promotes knowledge dissemination by supporting scholarly publications, journals, and academic outputs that showcase the research achievements of the UMak community.</p>
-                    <a href="publication.html" class="newsletter-content-read-more">
-                        <img src="./images/readmore.png" alt="Read More">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Article 4 -->
-            <div class="newsletter-content-card">
-                <div class="newsletter-content-image">
-                    <img src="./images/fd_image4.png" alt="Article Image">
-                </div>
-                <div class="newsletter-content-body">
-                    <h3 class="newsletter-content-title-text">Community Extension</h3>
-                    <p class="newsletter-content-description">In line with its civic mission, UMEDFI empowers faculty, students, and staff to engage in sustainable outreach programs that benefit local communities and contribute to inclusive social development.</p>
-                    <a href="communityextension.html" class="newsletter-content-read-more">
-                        <img src="./images/readmore.png" alt="Read More">
-                    </a>
-                </div>
-            </div>
-            
-
-            
-
-
 
 
             <!-- Add more article cards as needed -->

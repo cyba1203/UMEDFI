@@ -31,9 +31,18 @@
 
     <script defer>
         function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
-        }
+    const menu = document.getElementById("mobileMenu");
+    const newsletterSection = document.querySelector(".newsletter-content-section");
+
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        newsletterSection.style.marginTop = "120px"; // Reset margin when menu is closed
+    } else {
+        menu.classList.add("active");
+        newsletterSection.style.marginTop = "390px"; // Push content down to prevent overlap
+    }
+}
+
     </script>
 </head>
 
@@ -50,11 +59,11 @@
         
         <nav class="nav-links">
             <a class="btn btn-link" href="./index.html">HOME</a>
-            <a class="btn btn-link" href="#we-work">PROGRAM</a>
+            <a class="btn btn-link" href="./programs.html">PROGRAM</a>
             <div class="dropdown">
                 <a class="btn btn-link" href="devproj.html">PROJECTS</a>
                 <div class="dropdown-content">
-                    <a href="./devproj.html">Faculty Development</a>
+                    <a href="./facultydevelopment.html">Faculty Development</a>
                     <a href="./research.html">Research</a>
                     <a href="./publication.html">Publication</a>
                     <a href="./communityextension.html">Community Extension</a>
@@ -71,61 +80,39 @@
     
      <nav class="mobile-menu" id="mobileMenu">
         <a href="./index.html">HOME</a>
-        <a href="#we-work">PROGRAM</a>
-        <a href="#price">PROJECTS</a>
+        <a href="./programs.html">PROGRAM</a>
+        <a href="./devproj.html">PROJECTS</a>
         <a href="./faculty.html">BOARD OF DIRECTORS</a>
     </nav>
+
     <!-- Newsletter Articles Section -->
-      <div class="newsletter-articles-content-container">
-        <button class="newsletter-articles-content-floating-btn" aria-label="Close">
-            ×
-        </button>
-        <!-- First Image -->
-        <div class="newsletter-articles-content-image-wrapper">
-            <img src="./images/umedrebrand.png" alt="Article header image" class="newsletter-articles-content-image">
-        </div>
-
-        <!-- Title of the Article -->
-        <div class="newsletter-articles-content-body">
-            <h1 class="newsletter-articles-content-title">Doing Good While Doing Well: In-depth Look On CSR with Max Ventura</h1>
-            <p class="newsletter-articles-content-text">February 24, 2025</p>
-            <p class="newsletter-articles-content-text">by Michelle N. Layco</p>
-            
-            <!-- Paragraphs -->
-            <p class="newsletter-articles-content-text">
-                
-            </p>
-            
-            <p class="newsletter-articles-content-text">
-                
-            </p>
-            
-            <p class="newsletter-articles-content-text">
-                
-            </p>
-            <!-- 2nd IMAGE -->
-            <div class="newsletter-articles-otherimages-container">
-    <img src="./images/strategy2.png" alt="UMEDFI Faces" class="newsletter-articles-otherimages-img">
-</div>
-            <p class="newsletter-articles-content-text">
-            
+    <section class="newsletter-content-section">
+        <h1 class="newsletter-content-title">PUBLICATIONS</h1>
+        <div class="newsletter-content-container">
+            <!-- Article 1 -->
+            <div class="newsletter-content-card">
+                <div class="newsletter-content-image">
+                    <img src="./images/publications_image1.png" alt="Article Image">
+                </div>
+                <div class="newsletter-content-body">
+                    <h3 class="newsletter-content-title-text">Two new knowledge products launched at NCPAG’s Better Governance Forum No. 6</h3>
+                    <p class="newsletter-content-description">The University of the Philippines - National College of Public Administration and Governance (UP-NCPAG) together with the Eastern Regional Organization for Public Administration (EROPA) and the Philippine Society for Public Administration (PSPA) launched two new knowledge products during the Better Governance Forum No.6.
 </p>
+                    <a href="publicationproduct.html" class="newsletter-content-read-more">
+                        <img src="./images/readmore.png" alt="Read More">
+                    </a>
+                </div>
+            </div>
 
-            <p class="newsletter-articles-content-text">
-                
-</p>
-            <!-- AUTHOR PARAGRAPH -->
 
-<p class="newsletter-articles-content-text">
-                Written by:  Japhet Christianrei R. Marquez
-            </p>
+
+            <!-- Add more article cards as needed -->
         </div>
-    </div>
-    <footer class="footer">
+    </section>
+<footer class="footer">
     <div class="footer-content">
         <img class="footer-socials" src="./images/SOCIALSNEW.png" alt="Social Media Icons">
     </div>
 </footer>
-
 </body>
 </html>

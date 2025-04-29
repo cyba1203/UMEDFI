@@ -41,30 +41,38 @@
 
     <!-- Sticky Header with Navigation -->
     <div class="container yeo-header sticky-header">
-        <header class="navbar">
-            <section class="navbar-section logo-container">
-                <a class="navbar-brand logo" href="./">
-                    <img class="logo-img" src="./images/umedfilogo.png" alt="UMED Logo">
-                </a>
-            </section>
-            
-            <nav class="nav-links">
-                <a class="btn btn-link" href="./index.html">HOME</a>
-                <a class="btn btn-link" href="#we-work">PROGRAM</a>
-                <a class="btn btn-link" href="#price">PROJECTS</a>
-                <a class="btn btn-link" href="./faculty.html">BOARD OF DIRECTORS</a>
-            </nav>
-            
-            <div class="menu-icon" onclick="toggleMenu()">
-                <img src="./images/menu-icon.png" alt="Menu">
+    <header class="navbar">
+        <section class="navbar-section logo-container">
+            <a class="navbar-brand logo" href="./">
+                <img class="logo-img" src="./images/umedfilogo.png" alt="UMED Logo">
+            </a>
+        </section>
+        
+        <nav class="nav-links">
+            <a class="btn btn-link" href="./index.html">HOME</a>
+            <a class="btn btn-link" href="./programs.html">PROGRAM</a>
+            <div class="dropdown">
+                <a class="btn btn-link" href="devproj.html">PROJECTS</a>
+                <div class="dropdown-content">
+                    <a href="./facultydevelopment.html">Faculty Development</a>
+                    <a href="./research.html">Research</a>
+                    <a href="./publication.html">Publication</a>
+                    <a href="./communityextension.html">Community Extension</a>
+                </div>
             </div>
-        </header>
-    </div>
+            <a class="btn btn-link" href="./faculty.html">BOARD OF DIRECTORS</a>
+        </nav>
+        
+        <div class="menu-icon" onclick="toggleMenu()">
+            <img src="./images/menu-icon.png" alt="Menu">
+        </div>
+    </header>
+</div>
     
      <nav class="mobile-menu" id="mobileMenu">
         <a href="./index.html">HOME</a>
-        <a href="#we-work">PROGRAM</a>
-        <a href="#price">PROJECTS</a>
+        <a href="./programs.html">PROGRAM</a>
+        <a href="./devproj.html">PROJECTS</a>
         <a href="./faculty.html">BOARD OF DIRECTORS</a>
     </nav>
 

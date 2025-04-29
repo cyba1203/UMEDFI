@@ -9,7 +9,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     
     <!-- Page Title -->
-    <title>PROJECTS</title>
+    <title>NEWSLETTER</title>
     
     <!-- SEO Meta Tags -->
     <meta name="keywords" content="yeo">
@@ -31,26 +31,17 @@
 
     <script defer>
         function toggleMenu() {
-            const menu = document.getElementById('mobileMenu');
-            menu.classList.toggle('active');
+    const menu = document.getElementById("mobileMenu");
+    const newsletterSection = document.querySelector(".newsletter-content-section");
 
-        }
-        document.addEventListener("DOMContentLoaded", function () {
-    const images = document.querySelectorAll(".hover-image");
-
-    images.forEach(img => {
-        const originalSrc = img.src;
-        const hoverSrc = img.getAttribute("data-hover");
-
-        img.addEventListener("mouseover", function () {
-            img.src = hoverSrc;
-        });
-
-        img.addEventListener("mouseout", function () {
-            img.src = originalSrc;
-        });
-    });
-});
+    if (menu.classList.contains("active")) {
+        menu.classList.remove("active");
+        newsletterSection.style.marginTop = "120px"; // Reset margin when menu is closed
+    } else {
+        menu.classList.add("active");
+        newsletterSection.style.marginTop = "390px"; // Push content down to prevent overlap
+    }
+}
 
     </script>
 </head>
@@ -96,17 +87,17 @@
 
     <!-- Newsletter Articles Section -->
     <section class="newsletter-content-section">
-        <h1 class="newsletter-content-title">PROJECTS</h1>
+        <h1 class="newsletter-content-title">Research</h1>
         <div class="newsletter-content-container">
             <!-- Article 1 -->
             <div class="newsletter-content-card">
                 <div class="newsletter-content-image">
-                    <img src="./images/fd_image1.png" alt="Article Image">
+                    <img src="./images/research_image1.png" alt="Article Image">
                 </div>
                 <div class="newsletter-content-body">
-                    <h3 class="newsletter-content-title-text">Faculty Development</h3>
-                    <p class="newsletter-content-description">UMEDFI supports continuous learning and growth among UMak educators by providing training, workshops, and capacity-building programs that strengthen teaching practices and academic leadership.</p>
-                    <a href="facultydevelopment.html" class="newsletter-content-read-more">
+                    <h3 class="newsletter-content-title-text">Philippine Education Leaders Embark on U.S. Benchmarking Mission to Enhance Education Sector</h3>
+                    <p class="newsletter-content-description">The delegation of Philippine education leaders, including university presidents, commissioners, and policymakers, successfully concluded an Executive Benchmarking Mission in Washington DC and Boston, Massachusetts, United States of America from April 15 to 19, 2024.</p>
+                    <a href="researchmission.html" class="newsletter-content-read-more">
                         <img src="./images/readmore.png" alt="Read More">
                     </a>
                 </div>
@@ -115,49 +106,16 @@
             <!-- Article 2 -->
             <div class="newsletter-content-card">
                 <div class="newsletter-content-image">
-                    <img src="./images/fd_image2.png" alt="Article Image">
+                    <img src="./images/research_image2.png" alt="Article Image">
                 </div>
                 <div class="newsletter-content-body">
-                    <h3 class="newsletter-content-title-text">Research</h3>
-                    <p class="newsletter-content-description">Through funding, collaboration, and strategic guidance, UMEDFI encourages impactful research that addresses real-world issues, drives innovation, and contributes to the academic excellence of the University of Makati.</p>
-                    <a href="research.html" class="newsletter-content-read-more">
+                    <h3 class="newsletter-content-title-text">UMak delegates present their papers at the 1st KaMaG-Aral National Conference</h3>
+                    <p class="newsletter-content-description">University of Makati delegates from the College of Liberal Arts and Sciences (CLAS) and College of Innovative Teacher Education (CITE) attended the 1st KaMaG-Aral National Conference organized by the Social Sciences Research and Extension Institute (SSREI) of the College of Social Sciences, University of the Philippines (UP) Baguio, the Katipunan ng mga Mananaliksik at Guro ng Araling Panlipunan (KaMaG-Aral), with the theme, “Social Studies Education in the Post-Pandemic Era”</p>
+                    <a href="researchconference.html" class="newsletter-content-read-more">
                         <img src="./images/readmore.png" alt="Read More">
                     </a>
                 </div>
             </div>
-            <!-- Article 3 -->
-
-            <div class="newsletter-content-card">
-                <div class="newsletter-content-image">
-                    <img src="./images/fd_image3.png" alt="Article Image">
-                </div>
-                <div class="newsletter-content-body">
-                    <h3 class="newsletter-content-title-text">Publication</h3>
-                    <p class="newsletter-content-description"> UMEDFI promotes knowledge dissemination by supporting scholarly publications, journals, and academic outputs that showcase the research achievements of the UMak community.</p>
-                    <a href="publication.html" class="newsletter-content-read-more">
-                        <img src="./images/readmore.png" alt="Read More">
-                    </a>
-                </div>
-            </div>
-
-            <!-- Article 4 -->
-            <div class="newsletter-content-card">
-                <div class="newsletter-content-image">
-                    <img src="./images/fd_image4.png" alt="Article Image">
-                </div>
-                <div class="newsletter-content-body">
-                    <h3 class="newsletter-content-title-text">Community Extension</h3>
-                    <p class="newsletter-content-description">In line with its civic mission, UMEDFI empowers faculty, students, and staff to engage in sustainable outreach programs that benefit local communities and contribute to inclusive social development.</p>
-                    <a href="communityextension.html" class="newsletter-content-read-more">
-                        <img src="./images/readmore.png" alt="Read More">
-                    </a>
-                </div>
-            </div>
-            
-
-            
-
-
 
 
             <!-- Add more article cards as needed -->
